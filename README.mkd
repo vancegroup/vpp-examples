@@ -10,3 +10,7 @@ Dependencies
 - Boost - just the headers for smart pointer support.
 - CMake - to create a build system (visual studio, makefile, eclipse)
 
+
+Note
+----
+Clone this repository with `git clone --recursive` to make sure to get the submodule containing the Eigen math header library.
