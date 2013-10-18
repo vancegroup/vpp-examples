@@ -46,16 +46,15 @@ void callback(VirtContext vc, void *data) {
     float position[7]; // x, y, z, qw, qx, qy, qz
     v.getPosition(position);
 
-    Eigen::Map<Eigen::Vector3f> pos(position);
-
     if (!hasRun) {
         // On first loop, record the position
-        goal = pos;
+        goal = Eigen::Vector3f::Map(position);
         hasRun = true;
     }
 
     float forcetorque[6] = { 0 };
-    Eigen::Vector3f::Map(forcetorque) = (goal - pos) * stiffness;
+    Eigen::Vector3f::Map(forcetorque) =
+        (goal - Eigen::Vector3f::Map(position)) * stiffness;
     v.setForce(forcetorque);
 }
 
