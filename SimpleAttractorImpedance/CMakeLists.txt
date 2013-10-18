@@ -1,0 +1,3 @@
+
+add_executable(SimpleAttractorImpedance SimpleAttractorImpedance.cpp)
+target_link_libraries(SimpleAttractorImpedance ${VIRTUOSEVPP_LIBRARIES})
