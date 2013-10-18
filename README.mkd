@@ -1,0 +1,12 @@
+Haption Virtuose and `vpp` Example
+==============================
+
+Some simple examples on usage of the VirtuoseAPI, specifically via the wrap-vpp header.
+
+Dependencies
+-----------
+- VirtuoseAPI - get this from Haption.
+- wrap-vpp - pick right version of header from here: <https://github.com/vancegroup/wrap-vpp>
+- Boost - just the headers for smart pointer support.
+- CMake - to create a build system (visual studio, makefile, eclipse)
+
