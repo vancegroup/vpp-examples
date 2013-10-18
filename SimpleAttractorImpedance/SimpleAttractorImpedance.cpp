@@ -28,6 +28,7 @@
 
 // Standard includes
 #include <string>
+#include <iostream>
 
 static const std::string address = "127.0.0.1";
 
