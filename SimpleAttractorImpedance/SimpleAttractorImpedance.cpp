@@ -22,11 +22,23 @@
 // - none
 
 // Library/third-party includes
-// - none
+#include <vpp.h>
+#include <boost/shared_ptr.hpp>
+#include <boost/make_shared.hpp>
 
 // Standard includes
-// - none
+#include <string>
+
+static const std::string address = "127.0.0.1";
 
 int main() {
+    boost::shared_ptr<Virtuose> v;
+    try {
+        v = boost::make_shared<Virtuose>(address);
+    } catch (std::exception & e) {
+        std::cerr << "Error! " << e.what() << std::endl;
+        return 1;
+    }
+    
     return 0;
 }
